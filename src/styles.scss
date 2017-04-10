@@ -1,1 +1,20 @@
 /* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/theming';
+@include mat-core();
+
+$primary: mat-palette($mat-blue);
+$accent:  mat-palette($mat-blue-grey, A200);
+$warn:    mat-palette($mat-red); // optional (defaults to red).
+
+$theme: mat-light-theme($primary, $accent, $warn);
+
+@include angular-material-theme($theme);
+
+body {
+  background: #fafafa;
+  font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
+  color: #333;
+  margin: 0;
+}
+
+$nav-height: 64px;
