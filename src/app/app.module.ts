@@ -2,9 +2,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import { RouterModule } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterializeModule } from 'angular2-materialize';
 
+import { PostsService } from './posts.service';
+
+import { routes } from './app.routes';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { IntroComponent } from './home/intro/intro.component';
@@ -24,9 +28,10 @@ import { PostsComponent } from './posts/posts.component';
     FormsModule,
     HttpModule,
     BrowserAnimationsModule,
-    MaterializeModule
+    MaterializeModule,
+    RouterModule.forRoot(routes)
   ],
-  providers: [],
+  providers: [PostsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
