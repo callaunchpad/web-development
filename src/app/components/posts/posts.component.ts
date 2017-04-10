@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { PostsService } from '../posts.service';
+import { PostsService } from '../../services/posts/posts.service';
 
 @Component({
   selector: 'app-posts',
-  templateUrl: './posts.component.html',
-  styleUrls: ['./posts.component.scss']
+  templateUrl: 'posts.component.html',
+  styleUrls: ['posts.component.scss']
 })
 export class PostsComponent implements OnInit {
   // instantiate posts to an empty array

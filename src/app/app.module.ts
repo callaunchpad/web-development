@@ -6,20 +6,18 @@ import { RouterModule } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterializeModule } from 'angular2-materialize';
 
-import { PostsService } from './posts.service';
+import { PostsService } from './services/posts/posts.service';
 
 import { routes } from './app.routes';
 import { AppComponent } from './app.component';
-import { NavbarComponent } from './shared/navbar/navbar.component';
-import { IntroComponent } from './home/intro/intro.component';
-import { HomeComponent } from './home/home.component';
-import { PostsComponent } from './posts/posts.component';
+import { NavbarComponent } from './components/shared/navbar/navbar.component';
+import { HomeComponent } from './components/home/home.component';
+import { PostsComponent } from './components/posts/posts.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
-    IntroComponent,
     HomeComponent,
     PostsComponent
   ],

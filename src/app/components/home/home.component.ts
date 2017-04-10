@@ -10,11 +10,13 @@ export class User {
 }
 
 @Component({
-  selector: 'intro',
-  templateUrl: './intro.component.html',
-  styleUrls: ['./intro.component.scss']
+  selector: 'home',
+  templateUrl: 'home.component.html',
+  styleUrls: ['home.component.scss']
 })
-export class IntroComponent {
+export class HomeComponent {
+  title = 'EMW';
+
   content: Content = {
     greeting: "Hello. Welcome to Web Dev 101.",
     action: "Learn More",
