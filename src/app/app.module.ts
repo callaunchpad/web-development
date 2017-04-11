@@ -6,6 +6,8 @@ import { RouterModule } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterializeModule } from 'angular2-materialize';
 
+import { FirstNamePipe } from './pipes/firstname.pipe';
+
 import { PostsService } from './services/posts/posts.service';
 
 import { routes } from './app.routes';
@@ -19,7 +21,8 @@ import { PostsComponent } from './components/posts/posts.component';
     AppComponent,
     NavbarComponent,
     HomeComponent,
-    PostsComponent
+    PostsComponent,
+    FirstNamePipe
   ],
   imports: [
     BrowserModule,

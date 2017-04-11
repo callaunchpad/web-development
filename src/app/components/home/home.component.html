@@ -2,12 +2,12 @@
   <div class="valign-wrapper">
     <div class="valign">
       <h1 class="animated fadeInUp">Hello. {{content.greeting}}</h1>
-      <h4 class="animated fadeInUp">{{content.prompt}}</h4>
-      <div class="animated fadeInUp" *ngIf="showPrompt">
-        <input #name [(ngModel)]="user.name" placeholder="name" (keyup.enter)="submitForm(name.value)">
+      <div *ngIf="showPrompt">
+        <h4 class="animated fadeInUp">{{content.prompt}}</h4>
+        <input class="animated fadeInUp" #name [(ngModel)]="user.name" placeholder="name" (keyup.enter)="submitForm(name.value)">
       </div>
-      <div class="animated fadeInUp" *ngIf="!showPrompt">
-        <h3>Awesome. Hi, {{user.name}}! Please click on the "Posts" button in the navigation bar</h3>
+      <div *ngIf="!showPrompt">
+        <h4 class="animated fadeInUp" >Awesome. Hi, {{user.name | firstName}}! Please click on the "Posts" button in the navigation bar</h4>
       </div>
     </div>
   </div>
