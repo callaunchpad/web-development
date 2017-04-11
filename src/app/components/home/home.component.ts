@@ -16,14 +16,20 @@ export class User {
 })
 export class HomeComponent {
   title = 'EMW';
+  showPrompt = true;
+
+  user: User = {
+    name: null
+  }
 
   content: Content = {
-    greeting: "Hello. Welcome to Web Dev 101.",
+    greeting: "Welcome to Web Dev 101.",
     action: "Learn More",
     prompt: "What is your name?"
   }
 
-  user: User = {
-    name: null
+  submitForm(value: string) {
+    this.user.name = value;
+    this.showPrompt = false;
   }
 }
